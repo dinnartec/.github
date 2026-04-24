@@ -1,0 +1,21 @@
+# Dependabot config for this .github repository.
+# Keeps GitHub Actions inside any workflows up-to-date weekly.
+# Other repos in the org should add their own dependabot.yml
+# tailored to their own package ecosystems (npm, cargo, pip, etc.).
+
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: America/Bogota
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: chore
+      include: scope
+    labels:
+      - dependencies
+      - github-actions
